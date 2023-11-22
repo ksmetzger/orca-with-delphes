@@ -219,13 +219,13 @@ def main():
     # model.load_state_dict(state_dict, strict=False)
     # model = model.to(device)
     
-    # #Load the weights from katya/mia's model (first two layers)
-    # model.load_state_dict(torch.load("C:\\Users\\Kyle\\OneDrive\\Transfer Semester project\\orca_newmodel\\orca\\convert\\model_manual.pth"), strict=False)
-    # print(model)
-    # # Freeze the earlier filters (First two layers)
-    # for name, param in model.named_parameters():
-    #     if 'encoder.0.weight' in name or 'encoder.0.bias' in name or 'encoder.3.weight' in name or 'encoder.3.bias' in name or 'encoder.1.weight' in name or 'encoder.1.bias' in name or 'encoder.4.weight' in name or 'encoder.4.bias' in name:
-    #         param.requires_grad = False
+    #Load the weights from katya/mia's model (first two layers)
+    model.load_state_dict(torch.load('model_manual.pth'), strict=False)
+    print(model)
+    # Freeze the earlier filters (First two layers)
+    for name, param in model.named_parameters():
+        if 'encoder.0.weight' in name or 'encoder.0.bias' in name or 'encoder.3.weight' in name or 'encoder.3.bias' in name or 'encoder.1.weight' in name or 'encoder.1.bias' in name or 'encoder.4.weight' in name or 'encoder.4.bias' in name:
+            param.requires_grad = False
     #Print the name and parameters of the model
     for name, param in model.named_parameters():
         print(name)
