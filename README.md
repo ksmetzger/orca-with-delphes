@@ -1,9 +1,10 @@
-#Open-world semi-supervised anomaly detection with ORCA using DELPHES dataset
-##Modified from ORCA in order to work with particle physics simulation dataset DELPHES
+# Open-world semi-supervised anomaly detection with ORCA using DELPHES dataset
+## Modified files from ORCA in order to work with particle physics simulation dataset DELPHES
 The files are copied and modified from https://github.com/snap-stanford/orca.
-License: 	MIT License
-
-		Copyright (c) 2022 Kaidi Cao
+License: 
+	
+ 	MIT License	
+  	Copyright (c) 2022 Kaidi Cao
 
 		Permission is hereby granted, free of charge, to any person obtaining a copy
 		of this software and associated documentation files (the "Software"), to deal
@@ -22,8 +23,9 @@ License: 	MIT License
 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 		SOFTWARE.
-##Run orca with delphes
-Use weights (model_manual.pth) from https://github.com/katyagovorkova/cl4ad/blob/main/src/cl/models.py as pretraining by freezing the first two layers of the model (autoencoder.py).
-The delphes dataset is normalized by pT scaling https://github.com/katyagovorkova/cl4ad/blob/d0a9095a8c4f86a8b55fa66638d11de153ee489d/src/data_preprocessing.py#L46.
-In order to run
--`python orca_delphes.py --dataset background_with_signal_cvae --labeled-num 4`
+		
+## Run ORCA with DELPHES
+Use weights `model_manual.pth` from https://github.com/katyagovorkova/cl4ad/blob/main/src/cl/models.py as pretraining by freezing the first two layers of the model `autoencoder.py`.
+The delphes dataset is normalized by pT scaling [normalization](https://github.com/katyagovorkova/cl4ad/blob/d0a9095a8c4f86a8b55fa66638d11de153ee489d/src/data_preprocessing.py#L46).
+### In order to run
++ `python orca_delphes.py --dataset background_with_signal_cvae --labeled-num 4`
