@@ -5,7 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import models
-import open_world_cifar as datasets
+import open_world_delphes as datasets
 from utils import cluster_acc, AverageMeter, entropy, MarginLoss, accuracy, TransformTwice
 from sklearn import metrics
 import numpy as np
